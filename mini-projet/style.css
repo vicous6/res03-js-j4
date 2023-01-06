@@ -1,0 +1,223 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    width:100vw;
+    height:100vh;
+    padding:0;
+    display: grid;
+    grid-template-rows: 0.1fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body h1 {
+    text-align: center;
+    grid-column: 1 / 4;
+}
+
+#box1 {
+    width:50%;
+    height:50%;
+    background-color: red;
+    margin-bottom: 1rem;
+}
+
+#box2 {
+    width:8vh;
+    height:8vh;
+    border-radius: 50%;
+    background: linear-gradient(red, blue);
+    margin-bottom: 1rem;
+}
+
+#box2.move {
+    transform: translateX(20vh);
+}
+
+#ex4 table {
+    width:100%;
+}
+
+#ex4 table th {
+    width:45%;
+}
+
+#ex4 table td {
+    width:45%;
+}
+
+#stage {
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1rem;
+}
+
+#stage > section {
+    height: 15vh;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#ball {
+    width:8vh;
+    height:8vh;
+    border-radius: 50%;
+    background: linear-gradient(red, purple, blue);
+    margin-bottom: 1rem;
+    
+      /*animation-name : moveLeft;*/
+    animation-delay: 2s;
+    animation-duration: 5s;
+}
+
+
+@keyframes moveLeft {
+    0% {
+    
+     
+    }
+    20% {
+        
+      transform:  translateX(5vh) rotate(60deg); 
+    }
+
+    40% {
+      
+      transform:  translateX(10vh) rotate(120deg); 
+        
+    }
+
+    60% {
+
+            
+     transform:  translateX(15vh) rotate(180deg); 
+    }
+       
+
+    80% {
+       
+          transform:    translateX(20vh)rotate(260deg);
+     
+    }
+     100% {
+       
+              transform:  translateX(25vh) rotate(320deg); 
+       
+    }
+}
+
+
+.dropdown{
+    width:50vh;
+}
+#boutton{
+        width: 25vh;
+    height: 6vh;
+    margin-left: 4vw;
+    
+}
+#dropdown-menu{
+    
+    margin-left:9vh;
+    display:grid;
+    grid-template-rows:1fr 1fr 1fr ;
+     height:14vh;
+    width:12vw;
+      margin-top:1.2vh;
+       visibility:hidden;
+    
+}
+
+#dropdown-menu > li{
+    
+ 
+    list-style-type:none;
+    text-decoration:none;
+   
+   
+    display:grid;
+    
+}
+
+#dropdown-menu > li:hover{
+     background-color:grey;
+     opacity:0.5;
+    
+}
+#dropdown-menu > li > a{
+    
+    text-decoration:none;
+    justify-self:center;
+    align-self:center;
+    
+}
+
+
+.show{
+    
+    visibility:visible !important;
+}
+
+.border{
+    
+    border:1px solid black;
+}
